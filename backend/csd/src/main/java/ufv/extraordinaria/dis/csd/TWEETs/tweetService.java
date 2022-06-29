@@ -7,7 +7,8 @@ import org.springframework.stereotype.Service;
 public class tweetService {
 
     public ArrayList<tweet> readTweets() {
-        var twitter = gson.fromJson
+        var twitter = gson.fromJson(readTweets(), tweet.class);
+
     }
 
 
