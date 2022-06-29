@@ -9,19 +9,19 @@ import java.util.ArrayList;
 @RestController
 public class tweetController {
 
-    private final ufv.extraordinaria.dis.csd.TWEETs.tweetService tweetService;
+    private final tweetService t_service;
     private Gson gson = new Gson();
 
-    public tweetController(ufv.extraordinaria.dis.csd.TWEETs.tweetService tweetService) { this.tweetService = tweetService; }
+    public tweetController(ufv.extraordinaria.dis.csd.TWEETs.tweetService t_service) { this.t_service = t_service; }
 
     @GetMapping(value = "/getTweets", produces = "application/json")
-    public ArrayList<tweet> getTweets() { return tweetService.readTweets(); }
+    public ArrayList<tweet> getTweets() { return t_service.readTweets(); }
 
     @GetMapping(value = "/borrarTweet/{ID}")
-    public String borrarTweet(@PathVariable Long ID) { return tweetService.borrar_tweet(ID); }
+    public String borrarTweet(@PathVariable Long ID) { return t_service.borrar_tweet(ID); }
 
     @PostMapping(value = "/addTweet")
-    public String addTweet(@RequestBody tweet ts) { return tweetService.crear_tweet(ts); }
+    public String addTweet(@RequestBody tweet ts) { return t_service.crear_tweet(ts); }
 
 
 
