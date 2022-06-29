@@ -14,7 +14,7 @@ public class tweetController {
 
     public tweetController(ufv.extraordinaria.dis.csd.TWEETs.tweetService tweetService) { this.tweetService = tweetService; }
 
-    @GetMapping(value = "/get/tweets", produces = "application/json")
+    @GetMapping(value = "/getTweets", produces = "application/json")
     public ArrayList<tweet> getTweets() { return tweetService.readTweets(); }
 
     @GetMapping(value = "/borrarTweet/{ID}")

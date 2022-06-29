@@ -41,7 +41,6 @@ public class tweet {
     public void setFecha(String fecha) { this.fecha = fecha; }
 
     // To string
-    @Override
     public String ToString() {
         return "ID: " + ID + ", usuario: " + usuario + ", texto: " + texto + ", fecha: " + fecha +".";
     }
