@@ -1,4 +1,4 @@
-package ufv.extraordinaria.dis.csd;
+package ufv.extraordinaria.dis.csd.Shared;
 
 import com.google.gson.Gson;
 
@@ -11,22 +11,23 @@ import java.nio.file.Files;
 
 
 
-public class Service {
+public abstract class Service { //   ../../../../../resources/
     public final String fichero_almacen = "TWEETS_guardados.json";
     public static final Gson gson = new Gson();
 
 
     public File getFile() {
-        var URL = getClass().getClassLoader().getResource((fichero_almacen));
-        URI url = null;
+        var URL = getClass().getClassLoader().getResource(fichero_almacen);
+        assert URL != null;
+        URI uri = null;
 
         try {
-            url = URL.toURI();
+            uri = URL.toURI();
         } catch (URISyntaxException e) {
             e.printStackTrace();
         }
-
-        return new File(url);
+        assert uri != null;
+        return new File(uri);
 
     }
 
@@ -46,7 +47,7 @@ public class Service {
 
     public String guardar_tweet(String tweet) {
         File file = getFile();
-        String estado = "";
+        String estado;
 
         try {
             FileWriter guarda = new FileWriter(file);

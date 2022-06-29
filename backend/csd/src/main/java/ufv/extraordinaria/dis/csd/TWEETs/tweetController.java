@@ -12,7 +12,7 @@ public class tweetController {
     private final tweetService t_service;
     private Gson gson = new Gson();
 
-    public tweetController(ufv.extraordinaria.dis.csd.TWEETs.tweetService t_service) { this.t_service = t_service; }
+    public tweetController(tweetService t_service) { this.t_service = t_service; }
 
     @GetMapping(value = "/getTweets", produces = "application/json")
     public ArrayList<tweet> getTweets() { return t_service.readTweets(); }
@@ -22,9 +22,6 @@ public class tweetController {
 
     @PostMapping(value = "/addTweet")
     public String addTweet(@RequestBody tweet ts) { return t_service.crear_tweet(ts); }
-
-
-
 
 
 }

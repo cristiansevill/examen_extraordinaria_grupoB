@@ -1,4 +1,6 @@
-package ufv.extraordinaria.dis.csd.TWEETs;
+package ufv.extraordinaria.dis.csd.Shared;
+
+import ufv.extraordinaria.dis.csd.TWEETs.tweet;
 
 import java.util.ArrayList;
 
