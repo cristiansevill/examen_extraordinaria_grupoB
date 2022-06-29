@@ -10,7 +10,7 @@ public class tweetService extends ufv.extraordinaria.dis.csd.Service {
         var twitter = gson.fromJson(recuperar_tweets_JSON(), TWITTER.class);
         return twitter.getTweets();
     }
-
+/*
     public tweet ReadTweet_byID(Long tweet_ID) {
         var tweets = gson.fromJson(recuperar_tweets_JSON(), TWITTER.class);
 
@@ -20,7 +20,7 @@ public class tweetService extends ufv.extraordinaria.dis.csd.Service {
             }
         }
         return new tweet(); // Si no lo encuentra devuelve uno vacio
-    }
+    }*/
 
     public String crear_tweet(tweet ts) {
         String estado;

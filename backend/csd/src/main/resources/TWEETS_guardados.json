@@ -1,0 +1,17 @@
+{
+  "tweets": [
+    {
+      "ID": 1,
+      "usuario": "Manolo",
+      "text": "Mi primer tweet.",
+      "fecha": "29-6-2022"
+    },
+
+    {
+      "ID": 2,
+      "usuario": "Juan",
+      "text": "Hola.",
+      "fecha": "10-10-2021"
+    }
+  ]
+}

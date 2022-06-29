@@ -1,7 +1,6 @@
 package ufv.extraordinaria.dis.csd;
 
 import com.google.gson.Gson;
-import ufv.extraordinaria.dis.csd.TWEETs.tweet
 
 import java.io.File;
 import java.io.FileWriter;
